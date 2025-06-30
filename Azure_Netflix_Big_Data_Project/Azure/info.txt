@@ -1,0 +1,6 @@
+selected resource name:		pipeline1
+selected resource type:		pipeline
+factory name:			adf-netflix-rp
+factory location:		eastus
+subscription id:		4d29bf87-c03b-4d95-ae06-c2800a8c1fa9
+time of download (UTC):		Mon, 30 Jun 2025 08:46:45 GMT
