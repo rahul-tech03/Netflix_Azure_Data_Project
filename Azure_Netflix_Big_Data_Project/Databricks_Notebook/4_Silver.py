@@ -12,7 +12,7 @@ from pyspark.sql.types import *
 df = spark.read.format("delta")\
     .option("headers", True)\
     .option("inferSchema", True)\
-    .load("abfss://bronze@rpnetflixdl.dfs.core.windows.net/netflix_titles")
+    .load("abfss://bronze_layer_name@storage_account_name.dfs.core.windows.net/netflix_titles")
 
 # COMMAND ----------
 
@@ -74,7 +74,7 @@ count_type_df.display()
 
 df.write.format("delta")\
     .mode("overwrite")\
-    .option("path","abfss://silver@rpnetflixdl.dfs.core.windows.net/netflix_titles")\
+    .option("path","abfss://silver_layer_name@storage_account_name.dfs.core.windows.net/netflix_titles")\
     .save()
 
 # COMMAND ----------
