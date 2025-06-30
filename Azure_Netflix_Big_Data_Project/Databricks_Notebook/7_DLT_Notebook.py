@@ -15,7 +15,7 @@ lookup_rules = {
 )
 @dlt.expect_or_drop(lookup_rules)
 def myfun():
-    df = spark.readStream.format("delta").load("abfss://silver@rpnetflixdl.dfs.core.windows.net/netflix_directors")
+    df = spark.readStream.format("delta").load("abfss://silver_container_name@storage_account_name.dfs.core.windows.net/netflix_directors")
     return df
 
 # COMMAND ----------
@@ -25,7 +25,7 @@ def myfun():
 )
 @dlt.expect_or_drop(lookup_rules)
 def myfun():
-    df = spark.readStreamformat("delta").load("abfss://silver@rpnetflixdl.dfs.core.windows.net/netflix_cast")
+    df = spark.readStreamformat("delta").load("abfss://silver_container_name@storage_account_name.dfs.core.windows.net/netflix_cast")
     return df
 
 # COMMAND ----------
@@ -35,7 +35,7 @@ def myfun():
 )
 @dlt.expect_or_drop(lookup_rules)
 def myfun():
-    df = spark.readStreamformat("delta").load("abfss://silver@rpnetflixdl.dfs.core.windows.net/netflix_countries")
+    df = spark.readStreamformat("delta").load("abfss://silver_container_name@storage_account_name.dfs.core.windows.net/netflix_countries")
     return df
 
 # COMMAND ----------
@@ -45,7 +45,7 @@ def myfun():
 )
 @dlt.expect_or_drop("rule1", "show_id is NOT NULL")
 def myfun():
-    df = spark.readStreamformat("delta").load("abfss://silver@rpnetflixdl.dfs.core.windows.net/netflix_category")
+    df = spark.readStreamformat("delta").load("abfss://silver_container_name@storage_account_name.dfs.core.windows.net/netflix_category")
     return df
 
 # COMMAND ----------
@@ -54,7 +54,7 @@ def myfun():
 
 
 def gold_stg_netflix():
-    df = spark.readStreamformat("delta").load("abfss://silver@rpnetflixdl.dfs.core.windows.net/netflix_titles")
+    df = spark.readStreamformat("delta").load("abfss://silver_container_name@storage_account_name.dfs.core.windows.net/netflix_titles")
     return df
 
 # COMMAND ----------
