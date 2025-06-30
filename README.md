@@ -13,7 +13,7 @@ Silver Layer: Data cleaning and standardization with Delta Lake
 Gold Layer: Business-level aggregates via Delta Live Tables for insights and reporting
 
 🏗️ Solution Architecture
-![Architecture Diagram](architecture/ChatGPT%20Image%20May%2012,%202025,%2006_45_47%20PM.png)
+![Architecture Diagram](https://github.com/rahul-tech03/Netflix_Azure_Data_Project/blob/main/Azure_Netflix_Big_Data_Project/Archetecture/Archetecture.png)
 
 
 🔹 Bronze Layer – Raw Data Ingestion
